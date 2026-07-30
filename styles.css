@@ -172,10 +172,11 @@ nav {
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   text-align: center;
+  
 }
 
 .pricing__card--highlight {
-  background: #6415ff;
+  background: linear-gradient(130deg, #4c51bf, #667eea);
   color: white;
 }
 
@@ -216,13 +217,104 @@ nav {
 }
 
 .pricing__btn {
-  background: #6415ff;
+  background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
   color: white;
   border: none;
   padding: 12px 30px;
   border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
+}
+
+{
+  .plan {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 32px;
+  width: 320px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.plan:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+/* Top Stripe Color */
+.plan__stripe {
+  height: 6px;
+  width: 100%;
+  background: #ff6b6b;   /* Accent red */
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* Plan Title */
+.plan__top h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2d3748;        /* Dark slate */
+  margin-bottom: 10px;
+}
+
+/* Price */
+.plan__price {
+  font-size: 34px;
+  font-weight: 700;
+  color: #ff6b6b;        /* Accent red */
+}
+
+.plan__price span {
+  font-size: 14px;
+  color: #718096;        /* Cool gray */
+}
+
+/* Target Audience */
+.plan__target {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4a5568;        /* Medium slate */
+}
+
+/* Features */
+.plan__feature {
+  margin-top: 20px;
+  font-weight: 500;
+  color: #718096;        /* Cool gray */
+  font-size: 16px;
+}
+
+/* Button */
+.plan__bottom button {
+  margin-top: 28px;
+  width: 100%;
+  padding: 14px 0;
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.plan__bottom button:hover {
+  background: #ff5252;
+}
+
+  }
+
+.pricing__btn {
+  background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
 }
 
 .pricing__btn--white {
@@ -516,7 +608,7 @@ header .row {
   color: rgb(100, 21, 255);
   padding: 10px 15px;
   border-radius: 50%;
-  cursor: pointer;+
+  cursor: pointer;
   font-size: 18px;
 }
 
@@ -698,6 +790,24 @@ header .row {
 
 .footer__socials img:hover {
   transform: scale(1.1);
+}
+
+.footer__social--link {
+  margin-left: 16px;
+  padding: 8px;
+  background: #f7fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.footer__social--link svg {
+  height: 16px;
+  width: 16px;
 }
 
 /* RESPONSIVE */
@@ -1005,6 +1115,7 @@ header .row {
   gap: 20px;
 }
 
+
 /* CTA CONTAINER (SEPARATED LIKE SCREENSHOT) */
 .start__container {
   width: 90%;
@@ -1045,7 +1156,6 @@ header .row {
   font-size: 16px;
 }
 
-}
 
 .start__buttons .btn--outline {
   background: transparent;
@@ -1074,6 +1184,6 @@ header .row {
   padding: 12px 30px;
   border-radius: 50px;
   cursor: pointer;
+}
 
-
-  
+ 
