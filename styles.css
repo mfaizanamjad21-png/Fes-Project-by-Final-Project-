@@ -304,7 +304,7 @@ nav {
   background: #ff5252;
 }
 
-  }
+  
 
 .pricing__btn {
   background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
@@ -715,7 +715,13 @@ header .row {
     flex-direction: column;
     text-align: center;
   }
-
+{
+  @media (max-width: 768px) {
+  .footer__bottom {
+    flex-direction: column;
+  }
+}
+}
   .testimonials__left,
   .testimonials__right {
     width: 100%;
@@ -1186,4 +1192,42 @@ header .row {
   cursor: pointer;
 }
 
+
+ .@media (max-width: 768px) {
+  .hero__left,
+  .hero__right {
+    width: 100%;
+  }
+
+  .hero__email {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    border: none;
+    overflow: visible;
+  }
+
+  .hero__email input {
+    width: 100%;
+    min-width: 0;
+    border: 2px solid #d1d5db;
+    border-radius: 50px;
+  }
+
+  .hero__start {
+    width: 100%;
+    border-radius: 50px;
+  }
+
+  .footer {
+    padding: 60px 24px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+}
  
