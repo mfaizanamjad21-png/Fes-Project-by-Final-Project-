@@ -304,8 +304,7 @@ nav {
   background: #ff5252;
 }
 
-  
-
+{ 
 .pricing__btn {
   background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
   color: white;
@@ -720,6 +719,8 @@ header .row {
   .footer__bottom {
     flex-direction: column;
   }
+}
+
 }
 }
   .testimonials__left,
@@ -1193,7 +1194,8 @@ header .row {
 }
 
 
- .@media (max-width: 768px) {
+
+ . media (max-width: 768px) {
   .hero__left,
   .hero__right {
     width: 100%;
