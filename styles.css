@@ -1193,10 +1193,10 @@ header .row {
 }
 
 
-
-  .@media (max-width: 768px) {
++
+   .@media (max-width: 768px) {
   .hero__left,
-  .hero__right {
+  .hero__right 
     width: 100%;
   }
 
@@ -1224,7 +1224,7 @@ header .row {
     padding: 60px 24px;
   }
 
-  .footer__bottom {
+   .footer__bottom {
     flex-direction: column;
     gap: 20px;
     +
@@ -1281,7 +1281,7 @@ header .row {
   border: 2px solid white;
   color: white;
   padding: 12px 30px;
-  border-radius: 50px;
+   border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
   +}
