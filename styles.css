@@ -486,7 +486,7 @@ header .row {
 }
 
 #values img {
-  width: 50%;
+  width: 100%;
 }
 
 #values h2 {
@@ -1285,3 +1285,8 @@ header .row {
   cursor: pointer;
   font-size: 16px;
   +}
+
+
+  .footer__top {
+  flex-wrap: wrap;
+}
