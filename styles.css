@@ -226,7 +226,7 @@ nav {
   font-size: 16px;
 }
 
-{
+
   .plan {
   background: #ffffff;
   border-radius: 14px;
@@ -315,7 +315,7 @@ nav {
   cursor: pointer;
   font-size: 16px;
 }
-}
+
 
 .pricing__btn--white {
   background: white;
@@ -715,13 +715,13 @@ header .row {
     flex-direction: column;
     text-align: center;
   }
-{
+
   @media (max-width: 768px) {
   .footer__bottom {
     flex-direction: column;
   }
 }
-}
+
   .testimonials__left,
   .testimonials__right {
     width: 100%;
@@ -1193,8 +1193,8 @@ header .row {
 }
 
 
-+
-   .@media (max-width: 768px) {
+
+   @media (max-width: 768px) {
   .hero__left,
   .hero__right 
     width: 100%;
@@ -1227,7 +1227,6 @@ header .row {
    .footer__bottom {
     flex-direction: column;
     gap: 20px;
-    +
     text-align: center;
   }
 
@@ -1284,9 +1283,12 @@ header .row {
    border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
-  +}
+  }
 
 
   .footer__top {
   flex-wrap: wrap;
 }
+(
+  
+)
