@@ -1230,5 +1230,57 @@ header .row {
     text-align: center;
   }
 
+
+ /* OUTER CONTAINER (keeps CTA centered like screenshot) */
+.start__container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
 }
- 
+
+/* CTA CARD */
+#start {
+  background: #6415ff;        /* Purple brand color */
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* CTA TEXT */
+.start__content h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+/* CTA BUTTONS WRAPPER */
+.start__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* RED BUTTON */
+.start__buttons .btn--light {
+  background: #ef4444;        /* Red */
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* OUTLINE BUTTON */
+.start__buttons .btn--outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
