@@ -9,7 +9,9 @@ body {
   color: #243e63;
   line-height: 1.5;
 }
-
+.burger-menu {
+  display: none;
+}
 img {
   width: 100%;
 }
@@ -759,7 +761,15 @@ header .row {
   margin-bottom: 10px;
   opacity: 0.9;
 }
-
+.burger-menu {
+  display: block
+}
+.burger-menu__line {
+  width: 24px;
+  height: 3px;
+  background: #6415ff;
+  margin: 4px 0;
+}
 .footer__column a:hover {
   opacity: 1;
 }
@@ -849,6 +859,11 @@ header .row {
   .nav__row {
     flex-direction: column;
     gap: 20px;
+  }
+
+.nav__links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .nav__links {
@@ -1289,6 +1304,3 @@ header .row {
   .footer__top {
   flex-wrap: wrap;
 }
-(
-  
-)
