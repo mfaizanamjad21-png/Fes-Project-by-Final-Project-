@@ -19,16 +19,15 @@ img {
   padding: 80px 0;
 }
 
-.row {
+.row,
+.row__narrow {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .row__narrow {
-  width: 90%;
   max-width: 1000px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -37,15 +36,21 @@ img {
 }
 
 /* NAVIGATION */
-nav {
-  padding: 24px 0;
-}
-
 .nav__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.nav__links {
+  display: flex;
+  gap: 24px;
+}
+
+.burger-menu {
+  display: none;
+}
+
 
 .nav__logo {
   display: flex;
@@ -61,6 +66,7 @@ nav {
   display: flex;
   list-style: none;
   gap: 24px;
+  align-items: center;
 }
 
 .nav__links a {
@@ -89,6 +95,7 @@ nav {
   height: 3px;
   background: #6415ff;
   margin: 4px 0;
+  border-radius: 3px;
 }
 
 /* HERO */
@@ -149,7 +156,11 @@ nav {
   width: 50%;
 }
 
-/* FEATURES */
+/* FEATURES SECTION */
+#features {
+  padding: 80px 0;
+}
+
 #features h5 {
   margin-bottom: 16px;
   font-size: 22px;
@@ -178,12 +189,11 @@ nav {
   text-align: center;
   padding: 50px 30px;
   border-radius: 12px;
-  transform: scale(1.05); /* bigger cards */
+  transform: scale(1.05);
 }
 
-/* ICON WRAPPER */
 .feature__icon {
-  width: 110px;     /* bigger circle */
+  width: 110px;
   height: 110px;
   background: #f3f4f6;
   border-radius: 12px;
@@ -193,21 +203,18 @@ nav {
   margin: 0 auto 20px;
 }
 
-/* ICON IMAGE */
 .feature__icon img {
-  width: 65px;      /* bigger icon */
+  width: 65px;
 }
 
-/* TITLE */
 .feature__card h3 {
-  font-size: 26px;  /* bigger title */
+  font-size: 26px;
   margin-bottom: 12px;
   color: #243e63;
 }
 
-/* DESCRIPTION */
 .feature__card p {
-  font-size: 18px;  /* bigger text */
+  font-size: 18px;
   line-height: 1.6;
   color: #7c8ba1;
 }
@@ -217,6 +224,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 60px;
 }
 
 #quality h2 {
@@ -246,14 +254,20 @@ nav {
 }
 
 /* STEPS */
+#steps {
+  padding: 80px 0;
+}
+
 #steps .row {
   display: flex;
   align-items: center;
   gap: 60px;
+  justify-content: space-between;
 }
 
 #steps img {
   width: 50%;
+  max-width: 500px;
 }
 
 #steps h2 {
@@ -261,11 +275,37 @@ nav {
   font-size: 40px;
 }
 
+#steps h5 {
+  color: #6415ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+#steps h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #243e63;
+  margin-bottom: 5px;
+}
+
+#steps p {
+  color: #7c8ba1;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
 /* VALUES */
+#values {
+  padding: 80px 0;
+}
+
 .values__row {
   display: flex;
   align-items: center;
   gap: 60px;
+  justify-content: space-between;
 }
 
 .values__left,
@@ -330,63 +370,74 @@ nav {
   font-size: 16px;
 }
 
-/* PRICING */
+/* PRICING SECTION */
 #pricing {
-  text-align: center;
   padding: 80px 0;
+  font-family: "Inter", sans-serif;
+}
+
+#pricing h5 {
+  color: #6415ff;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 #pricing h2 {
-  font-size: 40px;
-  margin: 20px 0 50px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #243e63;
+  margin-bottom: 20px;
 }
 
 .pricing__intro {
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto 50px;
   color: #7c8ba1;
   font-size: 18px;
   line-height: 1.6;
+  text-align: center;
 }
 
+/* GRID */
 .pricing__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
+/* BASE CARD STYLE */
 .pricing__card {
-  background: white;
   padding: 40px 30px;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   text-align: center;
-}
-
-.pricing__card--highlight {
-  background: linear-gradient(130deg, #4c51bf, #667eea);
-  color: white;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  transition: 0.3s ease;
 }
 
 .pricing__card h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .pricing__card h1 {
-  font-size: 40px;
-  margin: 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .pricing__cycle {
   font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 10px;
+  font-weight: 600;
+  color: #7c8ba1;
+  margin-bottom: 20px;
 }
 
 .pricing__type {
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 16px;
+  color: #243e63;
+  margin-bottom: 25px;
 }
 
 .pricing__list {
@@ -396,18 +447,65 @@ nav {
 }
 
 .pricing__list li {
-  margin: 10px 0;
+  margin-bottom: 10px;
   color: #7c8ba1;
+  font-size: 15px;
 }
 
+/* BUTTON */
 .pricing__btn {
-  background: linear-gradient(115deg, rgb(56, 178, 172), rgb(129, 230, 217));
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+/* COLOR THEMES */
+.pricing__card:nth-child(1) {
+  border-top: 6px solid #22c55e;
+}
+
+.pricing__card:nth-child(1) h3 {
+  color: #22c55e;
+}
+
+.pricing__card:nth-child(1) .pricing__btn {
+  background: #22c55e;
+}
+
+.pricing__card:nth-child(2) {
+  background: #6415ff;
   color: white;
   border: none;
-  padding: 12px 30px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 16px;
+  transform: scale(1.05);
+}
+
+.pricing__card:nth-child(2) h3,
+.pricing__card:nth-child(2) h1,
+.pricing__card:nth-child(2) .pricing__cycle,
+.pricing__card:nth-child(2) .pricing__type,
+.pricing__card:nth-child(2) li {
+  color: white;
+}
+
+.pricing__card:nth-child(2) .pricing__btn {
+  background: white;
+  color: #6415ff;
+}
+
+.pricing__card:nth-child(3) {
+  border-top: 6px solid #f97316;
+}
+
+.pricing__card:nth-child(3) h3 {
+  color: #f97316;
+}
+
+.pricing__card:nth-child(3) .pricing__btn {
+  background: #f97316;
 }
 
 /* TESTIMONIALS */
@@ -573,7 +671,7 @@ nav {
   transform: scale(1.1);
 }
 
-/* MEDIA QUERIES */
+/* MOBILE / TABLET RESPONSIVE */
 
 /* 1280px */
 @media (max-width: 1280px) {
@@ -598,29 +696,66 @@ nav {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pricing__cards {
+  .testimonials__row,
+  .values__row,
+  #quality .row,
+  #steps .row {
+    gap: 40px;
+  }
+}
+
+/* 900px */
+@media (max-width: 900px) {
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing__card:nth-child(2) {
+    transform: none;
+  }
+
+  #steps .row {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+  }
+
+  #steps img {
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+
+  .values__row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .value__item {
+    justify-content: center;
+  }
+
+  .testimonials__row {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
 /* 768px */
 @media (max-width: 768px) {
   .hero__row,
-  header .row,
   .values__row,
   .testimonials__row,
   #quality .row,
-  #steps .row,
-  #values .row {
+  #steps .row {
     flex-direction: column;
     text-align: center;
   }
 
   .hero__left,
   .hero__right,
-  .header__description,
-  .header__img--wrapper,
   .values__left,
   .values__right,
   .testimonials__left,
@@ -628,26 +763,9 @@ nav {
     width: 100%;
   }
 
-  .features__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pricing__cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .nav__row {
     flex-direction: column;
     gap: 20px;
-  }
-
-  .nav__links {
-    display: none;
-  }
-
-  .burger-menu {
-    display: block;
   }
 
   .hero__email {
@@ -671,30 +789,6 @@ nav {
 
 /* 640px */
 @media (max-width: 640px) {
-  .hero__left,
-  .hero__right {
-    width: 100%;
-  }
-
-  .hero__email {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-    border: none;
-    overflow: visible;
-  }
-
-  .hero__email input {
-    width: 100%;
-    border: 2px solid #d1d5db;
-    border-radius: 50px;
-  }
-
-  .hero__start {
-    width: 100%;
-    border-radius: 50px;
-  }
-
   .footer {
     padding: 60px 24px;
   }
@@ -706,125 +800,42 @@ nav {
   }
 }
 
-/* VALUES BURGER */
-.values__burger {
-  display: none;
-  width: 32px;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
+/* BURGER MENU RESPONSIVE */
 
-.values__burger-line {
-  width: 100%;
-  height: 4px;
-  background: #6415ff;
-  margin: 5px 0;
-  border-radius: 4px;
-}
-
-/* TABLET / iPad */
-@media (max-width: 1024px) and (min-width: 768px) {
-
-  /* NAVIGATION */
+/* PHONE + TABLET (0–1024px) */
+@media (max-width: 1024px) {
   .nav__links {
     display: none;
   }
 
   .burger-menu {
     display: block;
+    cursor: pointer;
   }
+}
 
-  /* HERO */
-  .hero__row {
-    gap: 40px;
-  }
-
-  .hero__left h1 {
-    font-size: 42px;
-  }
-
-  .hero__left p {
-    font-size: 17px;
-  }
-
-  /* FEATURES */
-  .features__grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  }
-
-  .feature__icon {
-    width: 90px;
-    height: 90px;
-  }
-
-  .feature__icon img {
-    width: 50px;
-  }
-
-  /* VALUES */
-  .values__burger {
-    display: block;
-  }
-
-  .values__row {
+/* DESKTOP (1025px+) */
+@media (min-width: 1025px) {
+  .burger-menu {
     display: none;
   }
 
-  .values__row.active {
+  .nav__links {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  /* PRICING */
-  .pricing__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* TESTIMONIALS */
-  .testimonials__row {
-    gap: 40px;
   }
 }
 
-
-/* FIX VALUES SECTION ON MOBILE */
-@media (max-width: 768px) {
-
-  /* Stack the VALUES section vertically */
-  .values__row {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-
-  /* Make both sides full width */
-  .values__left,
-  .values__right {
-    width: 100%;
-  }
-
-  /* Center each value item */
-  .value__item {
-    justify-content: center;
-    text-align: center;
-  }
-
-  /* Fix spacing for intro paragraph */
-  .values__intro {
-    margin: 20px 0 30px;
-  }
-
-  /* Prevent image from shrinking awkwardly */
-  .values__right img,
-  .values__img--wrapper img {
-    max-width: 100%;
-    height: auto;
-  }
+/* MOBILE DROPDOWN MENU */
+.nav__open {
+  display: flex !important;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 100;
 }
-
-:host, :root {
-    --fa-style-family-brands: "Font Awesome 6 Brands";
-    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
-}
-
