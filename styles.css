@@ -49,6 +49,7 @@ input {
   outline: none;
 }
 
+
 /* ==========================================================================
    2. REUSABLE CLASSES & UTILITIES
    ========================================================================== */
@@ -124,83 +125,73 @@ section {
   padding: 96px 0;
 }
 
+
 /* ==========================================================================
    3. NAVIGATION
    ========================================================================== */
-nav {
-  padding: 32px 0;
-  position: relative;
-  z-index: 100;
-}
-
 .nav_row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 24px 32px;
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .nav_logo {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
 }
 
 .nav_logo img {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
 }
 
-.nav_logo h2 {
+.nav_logo_text {
   font-size: 24px;
   font-weight: 900;
-  letter-spacing: 0.05em;
   color: #243e63;
 }
 
 .nav_links {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav_links a {
-  font-weight: 600;
-  font-size: 16px;
+.nav_link {
+  text-decoration: none;
   color: #243e63;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s ease;
 }
 
-.nav_links a:hover {
+.nav_link:hover {
   color: #6415ff;
 }
 
-.nav_signup {
+.btn_signup {
   background-color: #6415ff;
-  color: #ffffff;
-  padding: 12px 32px;
-  border-radius: 50px;
+  color: #ffffff !important;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
   font-weight: 700;
   font-size: 14px;
 }
 
-.nav_signup:hover {
-  background-color: #5011cc;
+.burger_menu {
+  display: none; /* Hidden by default on desktop */
 }
 
-/* Burger Menu */
-.burger-menu {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-  z-index: 101;
-}
-
-.burger-menu_line {
-  width: 25px;
-  height: 3px;
-  background-color: #243e63;
-  border-radius: 2px;
-}
 
 /* ==========================================================================
    4. HERO SECTION
@@ -281,9 +272,14 @@ header {
   flex: 1;
 }
 
+
 /* ==========================================================================
    5. FEATURES SECTION
    ========================================================================== */
+#features {
+  padding: 80px 0;
+}
+
 .features_intro {
   max-width: 576px;
   margin: 16px auto 64px auto;
@@ -292,42 +288,49 @@ header {
 .features_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 40px 32px;
+  margin-top: 48px;
   text-align: left;
 }
 
 .feature_card {
   display: flex;
+  align-items: flex-start;
   gap: 16px;
-  padding: 16px;
+  padding: 0;
 }
 
 .feature_icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
   border: 1px solid #e5e7eb;
-  padding: 16px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: fit-content;
-  width: 64px;
-  height: 64px;
   flex-shrink: 0;
 }
 
 .feature_icon img {
   width: 24px;
   height: 24px;
+  object-fit: contain;
 }
 
 .feature_card h3 {
-  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #243e63;
 }
 
 .feature_card p {
-  font-size: 16px;
-  line-height: 2;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #7c8ba1;
 }
+
 
 /* ==========================================================================
    6. QUALITY SECTION
@@ -368,6 +371,7 @@ header {
   overflow: hidden;
 }
 
+
 /* ==========================================================================
    7. STEPS SECTION
    ========================================================================== */
@@ -397,6 +401,7 @@ header {
 #steps p {
   font-size: 14px;
 }
+
 
 /* ==========================================================================
    8. VALUES SECTION
@@ -469,6 +474,7 @@ header {
   flex: 1;
 }
 
+
 /* ==========================================================================
    9. PRICING SECTION
    ========================================================================== */
@@ -484,7 +490,6 @@ header {
   align-items: stretch;
 }
 
-/* Card Base Styles */
 .pricing_card {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
@@ -497,7 +502,6 @@ header {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
-/* Card Section Inner Wrappers */
 .pricing_header {
   padding: 32px;
   border-bottom: 1px solid #edf2f7;
@@ -513,7 +517,6 @@ header {
   padding: 32px;
 }
 
-/* Typography Inside Cards */
 .pricing_card h3 {
   font-size: 18px;
   font-weight: 700;
@@ -555,16 +558,14 @@ header {
   margin-bottom: 0;
 }
 
-/* Card Accents (Top Border Lines) */
 .pricing_card--personal {
-  border-top: 4px solid #48bb78; /* Mint Green */
+  border-top: 4px solid #48bb78;
 }
 
 .pricing_card--enterprise {
-  border-top: 4px solid #f56565; /* Coral / Pink */
+  border-top: 4px solid #f56565;
 }
 
-/* Featured / Middle Card (Business) */
 .pricing_card--highlight {
   background: linear-gradient(135deg, #5a67d8 0%, #667eea 100%);
   border: none;
@@ -583,7 +584,6 @@ header {
   color: #ffffff;
 }
 
-/* Button Variants */
 .pricing_btn {
   width: 100%;
   padding: 16px;
@@ -601,7 +601,6 @@ header {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Button Colors */
 .btn--green {
   background-color: #48bb78;
   color: #ffffff;
@@ -628,6 +627,7 @@ header {
 .btn--coral:hover {
   background-color: #e53e3e;
 }
+
 
 /* ==========================================================================
    10. TESTIMONIALS SECTION
@@ -687,8 +687,9 @@ header {
   color: #7c8ba1;
 }
 
+
 /* ==========================================================================
-   CTA / START SECTION
+   11. START / CTA SECTION
    ========================================================================== */
 #start {
   padding: 64px 0;
@@ -699,20 +700,18 @@ header {
   border-radius: 12px;
   padding: 80px 64px;
   position: relative;
-  overflow: hidden; /* Clips decorative circles inside border radius */
+  overflow: hidden;
 }
 
-/* Decorative Background Circles */
 .start_container::before,
 .start_container::after {
   content: "";
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.08); /* Subtle overlaid circle */
+  background-color: rgba(255, 255, 255, 0.08);
   pointer-events: none;
 }
 
-/* Bottom-left circle decorative element */
 .start_container::before {
   width: 320px;
   height: 320px;
@@ -720,7 +719,6 @@ header {
   bottom: -160px;
 }
 
-/* Top-right circle decorative element */
 .start_container::after {
   width: 200px;
   height: 200px;
@@ -733,7 +731,7 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 1; /* Ensures text & buttons stay on top of ::before/::after */
+  z-index: 1;
   gap: 32px;
 }
 
@@ -752,7 +750,6 @@ header {
   flex-shrink: 0;
 }
 
-/* "Get Started" Coral Button */
 .btn_get_started {
   background-color: #f56565;
   color: #ffffff;
@@ -771,7 +768,6 @@ header {
   transform: translateY(-1px);
 }
 
-/* "Contact Us" Outlined Button */
 .btn_contact_us {
   background-color: transparent;
   color: #ffffff;
@@ -791,29 +787,6 @@ header {
   transform: translateY(-1px);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  .start_container {
-    padding: 60px 40px;
-  }
-  
-  .start_content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .start_buttons {
-    flex-direction: column;
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .btn_get_started,
-  .btn_contact_us {
-    width: 100%;
-    text-align: center;
-  }
-}
 
 /* ==========================================================================
    12. FOOTER SECTION
@@ -904,16 +877,55 @@ header {
   fill: #6415ff;
 }
 
+
 /* ==========================================================================
    13. MEDIA QUERIES & RESPONSIVENESS
    ========================================================================== */
+
+/* TABLET & SMALL DESKTOP (<= 1024px) */
 @media (max-width: 1024px) {
   h1, h2 {
     font-size: 36px;
   }
 
+  /* Navigation Mobile Toggle */
+  .nav_links {
+    display: none;
+  }
+
+  .burger_menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .burger_line {
+    width: 26px;
+    height: 3px;
+    background-color: #6415ff;
+    margin: 5px 0;
+    border-radius: 2px;
+  }
+
+  .nav_links.nav_open {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    right: 16px;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    gap: 16px;
+    text-align: center;
+  }
+
+  /* Layout Adjustments */
   .features_grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   .pricing_grid {
@@ -927,35 +939,36 @@ header {
   }
 }
 
-@media (max-width: 768px) {
-  /* Navigation Drawer */
-  .burger-menu {
-    display: flex;
+/* TABLET / SMALL DEVICES (<= 992px) */
+@media (max-width: 992px) {
+  .start_container {
+    padding: 60px 40px;
   }
-
-  .nav_links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 300px;
-    background-color: #ffffff;
+  
+  .start_content {
     flex-direction: column;
-    justify-content: center;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    transition: right 300ms ease;
+    text-align: center;
   }
 
-  .nav_links.nav_open {
-    right: 0;
+  .start_buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
   }
 
-  /* Flex Direction Adjustments */
+  .btn_get_started,
+  .btn_contact_us {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* MOBILE DEVICES (<= 768px) */
+@media (max-width: 768px) {
   .row,
   .hero_row,
   .values_row,
-  .testimonials_row,
-  .start_content {
+  .testimonials_row {
     flex-direction: column;
     text-align: center;
   }
@@ -968,16 +981,6 @@ header {
     max-width: 100%;
   }
 
-  .features_grid {
-    grid-template-columns: 1fr;
-  }
-
-  .feature_card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
   .value_item {
     flex-direction: column;
     align-items: center;
@@ -985,11 +988,6 @@ header {
 
   .hero_email {
     margin: 0 auto 32px auto;
-  }
-
-  .start_buttons {
-    flex-direction: column;
-    width: 100%;
   }
 
   .footer_top {
@@ -1002,6 +1000,25 @@ header {
   }
 }
 
+/* SMALL MOBILE DEVICES (<= 640px) */
+@media (max-width: 640px) {
+  #features {
+    padding: 48px 0;
+  }
+
+  .features_grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature_card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* EXTRA SMALL MOBILE DEVICES (<= 480px) */
 @media (max-width: 480px) {
   .hero_email input {
     padding-right: 32px;
@@ -1018,94 +1035,3 @@ header {
     grid-template-columns: 1fr;
   }
 }
-
-/* 1. Update line styling */
-.burger-menu_line {
-  width: 28px; /* Added width so lines are visible */
-  height: 3px;
-  background: #6415ff;
-  margin: 5px 0;
-  border-radius: 3px;
-}
-
-/* 2. Update 768px media query */
-@media (max-width: 768px) {
-  .hero_row,
-  .values_row,
-  .testimonials_row,
-  #quality.row,
-  #steps .row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  /* REMOVED .nav_row from flex-direction: column so header stays row-aligned */
-  
-  .hero_left,
-  .hero_right,
-  .values_left,
-  .values_right,
-  .testimonials_left,
-  .testimonials_right {
-    width: 100%;
-  }
-
-  .hero_email {
-    flex-direction: column;
-    gap: 12px;
-  }
-}
-/* ==========================================================================
-   5. FEATURES SECTION
-   ========================================================================== */
-.features_intro {
-  max-width: 576px;
-  margin: 16px auto 64px auto;
-}
-
-.features_grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px 32px; /* 40px vertical gap, 32px horizontal gap */
-  text-align: left;
-}
-
-/* Align icon on the left, title & paragraph stacked on the right */
-.feature_card {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 0;
-}
-
-/* Icon container styling */
-.feature_icon {
-  border: 1px solid #e5e7eb;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  flex-shrink: 0;
-}
-
-.feature_icon img {
-  width: 24px;
-  height: 24px;
-}
-
-/* Wrap h3 and p inside the layout naturally */
-.feature_card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #243e63;
-}
-
-.feature_card p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #7c8ba1;
-}
-

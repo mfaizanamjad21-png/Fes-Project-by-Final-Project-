@@ -1,40 +1,44 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treact Clone</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <!-- NAVIGATION -->
-    <nav>
-      <div class="row nav_row">
-        <div class="nav_logo">
-          <img src="assets/logo-light.svg" alt="Treact Logo" />
-          <h2>Treact</h2>
-        </div>
 
-        
-
-        <!-- SINGLE BURGER MENU (keep this one) -->
-        <div class="burger-menu">
-          <div class="burger-menu_line"></div>
-          <div class="burger-menu_line"></div>
-          <div class="burger-menu_line"></div>
-        </div>
-
-        <ul class="nav_links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Login</a></li>
-          <li><button class="nav_signup">Sign Up</button></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- HERO -->
+    <!-- HEADER / NAVIGATION -->
     <header>
+      <nav class="nav_row">
+        <!-- Left: Logo -->
+        <a href="#" class="nav_logo">
+          <img src="assets/logo.svg" alt="Treact Logo" />
+          <span class="nav_logo_text">Treact</span>
+        </a>
+
+        <!-- Right: Desktop Navigation Links -->
+        <ul class="nav_links">
+          <li><a href="#" class="nav_link">About</a></li>
+          <li><a href="#" class="nav_link">Blog</a></li>
+          <li><a href="#" class="nav_link">Pricing</a></li>
+          <li><a href="#" class="nav_link">Contact Us</a></li>
+          <li><a href="#" class="nav_link">Login</a></li>
+          <li><a href="#" class="btn_signup">Sign Up</a></li>
+        </ul>
+
+        <!-- Right (Mobile/Tablet Only): Burger Icon -->
+        <div class="burger_menu">
+          <div class="burger_line"></div>
+          <div class="burger_line"></div>
+          <div class="burger_line"></div>
+        </div>
+      </nav>
+
+      <!-- HERO SECTION -->
       <div class="row hero_row">
         <div class="hero_left">
           <h1>Beautiful React Templates <span class="purple">for you.</span></h1>
@@ -66,99 +70,100 @@
     </header>
 
     <main>
-     <!-- FEATURES -->
-<section id="features">
-  <div class="container">
-    <div class="row_narrow">
-      <h5 class="purple">FEATURES</h5>
-      <h2>We Have Amazing <span class="gradient-text">Service.</span></h2>
-      <p class="features_intro">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-      <div class="features_grid">
-        <div class="feature_card">
-          <div class="feature_icon">
-            <img src="assets/shield-icon.svg" alt="Secure" />
-          </div>
-          <div class="feature_text">
-            <h3>Secure</h3>
-            <p>
-              Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
-              quis nostrud.
+      <!-- FEATURES -->
+      <section id="features">
+        <div class="container">
+          <div class="row_narrow">
+            <h5 class="purple">FEATURES</h5>
+            <h2>We Have Amazing <span class="gradient-text">Service.</span></h2>
+            <p class="features_intro">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
+
+            <div class="features_grid">
+              <div class="feature_card">
+                <div class="feature_icon">
+                  <img src="assets/shield-icon.svg" alt="Secure" />
+                </div>
+                <div class="feature_text">
+                  <h3>Secure</h3>
+                  <p>
+                    Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                    quis nostrud.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature_card">
+                <div class="feature_icon">
+                  <img src="assets/support-icon.svg" alt="Support" />
+                </div>
+                <div class="feature_text">
+                  <h3>24/7 Support</h3>
+                  <p>
+                    Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                    quis nostrud.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature_card">
+                <div class="feature_icon">
+                  <img src="assets/customize-icon.svg" alt="Customizable" />
+                </div>
+                <div class="feature_text">
+                  <h3>Customizable</h3>
+                  <p>
+                    Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                    quis nostrud.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature_card">
+                <div class="feature_icon">
+                  <img src="assets/reliable-icon.svg" alt="Reliable" />
+                </div>
+                <div class="feature_text">
+                  <h3>Reliable</h3>
+                  <p>
+                    Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                    quis nostrud.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature_card">
+                <div class="feature_icon">
+                  <img src="assets/fast-icon.svg" alt="Fast" />
+                </div>
+                <div class="feature_text">
+                  <h3>Fast</h3>
+                  <p>
+                    Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                    quis nostrud.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature_card">
+                <div class="feature_icon">
+                  <img src="assets/simple-icon.svg" alt="Easy" />
+                </div>
+                <div class="feature_text">
+                  <h3>Easy</h3>
+                  <p>
+                    Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                    quis nostrud.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="feature_card">
-          <div class="feature_icon">
-            <img src="assets/support-icon.svg" alt="Support" />
-          </div>
-          <div class="feature_text">
-            <h3>24/7 Support</h3>
-            <p>
-              Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
-              quis nostrud.
-            </p>
-          </div>
-        </div>
-
-        <div class="feature_card">
-          <div class="feature_icon">
-            <img src="assets/customize-icon.svg" alt="Customizable" />
-          </div>
-          <div class="feature_text">
-            <h3>Customizable</h3>
-            <p>
-              Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
-              quis nostrud.
-            </p>
-          </div>
-        </div>
-
-        <div class="feature_card">
-          <div class="feature_icon">
-            <img src="assets/reliable-icon.svg" alt="Reliable" />
-          </div>
-          <div class="feature_text">
-            <h3>Reliable</h3>
-            <p>
-              Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
-              quis nostrud.
-            </p>
-          </div>
-        </div>
-
-        <div class="feature_card">
-          <div class="feature_icon">
-            <img src="assets/fast-icon.svg" alt="Fast" />
-          </div>
-          <div class="feature_text">
-            <h3>Fast</h3>
-            <p>
-              Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
-              quis nostrud.
-            </p>
-          </div>
-        </div>
-
-        <div class="feature_card">
-          <div class="feature_icon">
-            <img src="assets/simple-icon.svg" alt="Easy" />
-          </div>
-          <div class="feature_text">
-            <h3>Easy</h3>
-            <p>
-              Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
-              quis nostrud.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
       <!-- QUALITY -->
       <section id="quality">
         <div class="container">
@@ -260,84 +265,84 @@
       </section>
 
       <!-- PRICING -->
-<section id="pricing">
-  <div class="container">
-    <div class="row_narrow">
-      <h5 class="purple">PRICING</h5>
-      <h2>Reasonable & Flexible <span class="purple">Plans.</span></h2>
-      <p class="pricing_intro">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <section id="pricing">
+        <div class="container">
+          <div class="row_narrow">
+            <h5 class="purple">PRICING</h5>
+            <h2>Reasonable & Flexible <span class="purple">Plans.</span></h2>
+            <p class="pricing_intro">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
 
-      <div class="pricing_grid">
-        <!-- Personal Plan -->
-        <div class="pricing_card pricing_card--personal">
-          <div class="pricing_header">
-            <h3>PERSONAL</h3>
-            <h1>$17.99</h1>
-            <p class="pricing_cycle">MONTHLY</p>
-          </div>
-          <div class="pricing_body">
-            <p class="pricing_type">For Individuals</p>
-            <ul class="pricing_list">
-              <li>30 Templates</li>
-              <li>7 Landing Pages</li>
-              <li>12 Internal Pages</li>
-              <li>Basic Assistance</li>
-            </ul>
-          </div>
-          <div class="pricing_footer">
-            <button class="pricing_btn btn--green">BUY NOW</button>
+            <div class="pricing_grid">
+              <!-- Personal Plan -->
+              <div class="pricing_card pricing_card--personal">
+                <div class="pricing_header">
+                  <h3>PERSONAL</h3>
+                  <h1>$17.99</h1>
+                  <p class="pricing_cycle">MONTHLY</p>
+                </div>
+                <div class="pricing_body">
+                  <p class="pricing_type">For Individuals</p>
+                  <ul class="pricing_list">
+                    <li>30 Templates</li>
+                    <li>7 Landing Pages</li>
+                    <li>12 Internal Pages</li>
+                    <li>Basic Assistance</li>
+                  </ul>
+                </div>
+                <div class="pricing_footer">
+                  <button class="pricing_btn btn--green">BUY NOW</button>
+                </div>
+              </div>
+
+              <!-- Business Plan (Featured) -->
+              <div class="pricing_card pricing_card--highlight">
+                <div class="pricing_header">
+                  <h3>BUSINESS</h3>
+                  <h1>$37.99</h1>
+                  <p class="pricing_cycle">MONTHLY</p>
+                </div>
+                <div class="pricing_body">
+                  <p class="pricing_type">For Small Businesses</p>
+                  <ul class="pricing_list">
+                    <li>60 Templates</li>
+                    <li>15 Landing Pages</li>
+                    <li>22 Internal Pages</li>
+                    <li>Priority Assistance</li>
+                  </ul>
+                </div>
+                <div class="pricing_footer">
+                  <button class="pricing_btn btn--white">BUY NOW</button>
+                </div>
+              </div>
+
+              <!-- Enterprise Plan -->
+              <div class="pricing_card pricing_card--enterprise">
+                <div class="pricing_header">
+                  <h3>ENTERPRISE</h3>
+                  <h1>$57.99</h1>
+                  <p class="pricing_cycle">MONTHLY</p>
+                </div>
+                <div class="pricing_body">
+                  <p class="pricing_type">For Large Companies</p>
+                  <ul class="pricing_list">
+                    <li>90 Templates</li>
+                    <li>27 Landing Pages</li>
+                    <li>37 Internal Pages</li>
+                    <li>Personal Assistance</li>
+                  </ul>
+                </div>
+                <div class="pricing_footer">
+                  <button class="pricing_btn btn--coral">BUY NOW</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- Business Plan (Featured) -->
-        <div class="pricing_card pricing_card--highlight">
-          <div class="pricing_header">
-            <h3>BUSINESS</h3>
-            <h1>$37.99</h1>
-            <p class="pricing_cycle">MONTHLY</p>
-          </div>
-          <div class="pricing_body">
-            <p class="pricing_type">For Small Businesses</p>
-            <ul class="pricing_list">
-              <li>60 Templates</li>
-              <li>15 Landing Pages</li>
-              <li>22 Internal Pages</li>
-              <li>Priority Assistance</li>
-            </ul>
-          </div>
-          <div class="pricing_footer">
-            <button class="pricing_btn btn--white">BUY NOW</button>
-          </div>
-        </div>
-
-        <!-- Enterprise Plan -->
-        <div class="pricing_card pricing_card--enterprise">
-          <div class="pricing_header">
-            <h3>ENTERPRISE</h3>
-            <h1>$57.99</h1>
-            <p class="pricing_cycle">MONTHLY</p>
-          </div>
-          <div class="pricing_body">
-            <p class="pricing_type">For Large Companies</p>
-            <ul class="pricing_list">
-              <li>90 Templates</li>
-              <li>27 Landing Pages</li>
-              <li>37 Internal Pages</li>
-              <li>Personal Assistance</li>
-            </ul>
-          </div>
-          <div class="pricing_footer">
-            <button class="pricing_btn btn--coral">BUY NOW</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-       
       <!-- TESTIMONIALS -->
       <section id="testimonials" class="testimonials">
         <div class="row testimonials_row">
@@ -381,19 +386,21 @@
       </section>
 
       <!-- START / CTA SECTION -->
-<section id="start">
-  <div class="container">
-    <div class="start_container">
-      <div class="start_content">
-        <h2>Developers all over the world are happily using Treact.</h2>
-        <div class="start_buttons">
-          <a href="#" class="btn_get_started">Get Started</a>
-          <a href="#" class="btn_contact_us">Contact Us</a>
+      <section id="start">
+        <div class="container">
+          <div class="start_container">
+            <div class="start_content">
+              <h2>Developers all over the world are happily using Treact.</h2>
+              <div class="start_buttons">
+                <a href="#" class="btn_get_started">Get Started</a>
+                <a href="#" class="btn_contact_us">Contact Us</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
+    </main>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer_top">
@@ -492,9 +499,9 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JAVASCRIPT -->
     <script>
-      const burger = document.querySelector('.burger-menu');
+      const burger = document.querySelector('.burger_menu');
       const navLinks = document.querySelector('.nav_links');
 
       burger.addEventListener('click', () => {
